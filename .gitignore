@@ -83,4 +83,7 @@ public
 
 # Temporary files
 *.tmp
-*.temp 
+*.temp
+
+# Old demo files
+2/ 
