@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+@font-face {
+  font-family: 'Chalktastic';
+  src: url('./assets/chalktastic-font/Chalktastic-r78L.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chalktastic';
+  src: url('./assets/chalktastic-font/ChalktasticItalic-YYA4.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chalktastic', cursive;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('/src/assets/chalk-board-bg.jpg') center center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.chalktastic-font {
+  font-family: 'Chalktastic', cursive;
+  font-weight: 400;
+  font-style: normal;
+} 

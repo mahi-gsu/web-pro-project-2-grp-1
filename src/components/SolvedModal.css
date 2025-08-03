@@ -1,0 +1,179 @@
+.solved-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.solved-modal {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  max-width: 500px;
+  width: 90%;
+  animation: modalAppear 0.5s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.solved-modal-content {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.solved-title {
+  font-family: 'Chalktastic', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 
+    3px 3px 6px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.3);
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.solved-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-label {
+  font-family: 'Chalktastic', cursive;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.stat-value {
+  font-family: 'Chalktastic', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.solved-message {
+  margin: 25px 0;
+  line-height: 1.6;
+}
+
+.solved-message p {
+  font-family: 'Chalktastic', cursive;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+
+.saving-stats {
+  font-family: 'Chalktastic', cursive;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.stats-saved {
+  font-family: 'Chalktastic', cursive;
+  font-size: 18px;
+  color: rgba(40, 167, 69, 0.9);
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.solved-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ok-btn {
+  font-family: 'Chalktastic', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  background: rgba(40, 167, 69, 0.3);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.ok-btn:hover {
+  background: rgba(40, 167, 69, 0.5);
+  border-color: rgba(40, 167, 69, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(40, 167, 69, 0.3);
+}
+
+@media (max-width: 768px) {
+  .solved-modal {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .solved-title {
+    font-size: 28px;
+  }
+  
+  .solved-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .solved-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .ok-btn {
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+} 

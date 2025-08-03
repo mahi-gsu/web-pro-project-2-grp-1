@@ -1,0 +1,313 @@
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.home-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.puzzle-explanation {
+  text-align: center;
+  max-width: 800px;
+  background: transparent;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.explanation-title {
+  font-family: 'Chalktastic', cursive;
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.explanation-text {
+  font-family: 'Chalktastic', cursive;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.explanation-text:last-child {
+  margin-bottom: 0;
+}
+
+.puzzle-selection {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.selection-title {
+  font-family: 'Chalktastic', cursive;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.upload-puzzle-btn {
+  background: rgba(40, 167, 69, 0.2);
+  border: 2px solid rgba(40, 167, 69, 0.5);
+  color: rgba(40, 167, 69, 0.9);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: 'Chalktastic', cursive;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.upload-puzzle-btn:hover {
+  background: rgba(40, 167, 69, 0.3);
+  border-color: rgba(40, 167, 69, 0.8);
+  transform: translateY(-2px);
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.puzzle-option-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.puzzle-option {
+  background: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.puzzle-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.puzzle-option:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.puzzle-option:hover::before {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.puzzle-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.puzzle-icon {
+  font-size: 48px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.puzzle-icon span {
+  font-size: 48px;
+}
+
+.puzzle-name {
+  font-family: 'Chalktastic', cursive;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.puzzle-description {
+  font-family: "Fredericka the Great", serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home-content {
+    gap: 40px;
+  }
+  
+  .puzzle-explanation {
+    padding: 30px 20px;
+  }
+  
+  .explanation-title {
+    font-size: 36px;
+  }
+  
+  .explanation-text {
+    font-size: 18px;
+  }
+  
+  .selection-title {
+    font-size: 28px;
+  }
+  
+  .puzzle-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .puzzle-option {
+    padding: 25px 20px;
+  }
+  
+  .puzzle-icon {
+    font-size: 40px;
+  }
+  
+  .puzzle-name {
+    font-size: 20px;
+  }
+  
+  .puzzle-description {
+    font-size: 14px;
+  }
+  
+  .selection-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .upload-puzzle-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+.custom-badge {
+  background: rgba(255, 193, 7, 0.2);
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  color: rgba(255, 193, 7, 0.9);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.5);
+  color: rgba(220, 53, 69, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.error-message button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgba(220, 53, 69, 0.9);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.error-message button:hover {
+  color: rgba(220, 53, 69, 1);
+  transform: scale(1.1);
+}
+
+.loading-message {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading-message h2 {
+  font-family: 'Chalktastic', cursive;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.loading-message p {
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.no-puzzles {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.no-puzzles p {
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+} 

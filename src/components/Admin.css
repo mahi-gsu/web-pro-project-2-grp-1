@@ -1,0 +1,434 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Chalktastic', cursive;
+  background: transparent;
+  min-height: 100vh;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: transparent;
+  text-align: center;
+}
+
+.admin-header h1 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.5rem;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.back-btn {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: 'Chalktastic', cursive;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: transparent;
+  padding: 20px;
+  justify-content: center;
+}
+
+.tab-btn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: 'Chalktastic', cursive;
+  transition: all 0.3s;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(255, 255, 255, 0.8);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.error-message {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.error-message button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.admin-content {
+  background: transparent;
+  padding: 20px;
+}
+
+/* User Management Styles */
+.users-section h2,
+.backgrounds-section h2,
+.stats-section h2 {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2rem;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.users-table th,
+.users-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.users-table th {
+  background: transparent;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.users-table select {
+  padding: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  font-size: 1rem;
+}
+
+.action-btn {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Chalktastic', cursive;
+  margin-right: 8px;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+.action-btn.delete {
+  border-color: rgba(255, 100, 100, 0.5);
+  color: rgba(255, 100, 100, 0.9);
+}
+
+.action-btn.delete:hover {
+  background: rgba(255, 100, 100, 0.1);
+  border-color: rgba(255, 100, 100, 0.8);
+}
+
+.action-btn.deactivate {
+  border-color: rgba(255, 193, 7, 0.5);
+  color: rgba(255, 193, 7, 0.9);
+}
+
+.action-btn.deactivate:hover {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.8);
+}
+
+.action-btn.activate {
+  border-color: rgba(40, 167, 69, 0.5);
+  color: rgba(40, 167, 69, 0.9);
+}
+
+.action-btn.activate:hover {
+  background: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.8);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background: rgba(40, 167, 69, 0.2);
+  color: rgba(40, 167, 69, 0.9);
+  border: 1px solid rgba(40, 167, 69, 0.5);
+}
+
+.status-badge.inactive {
+  background: rgba(108, 117, 125, 0.2);
+  color: rgba(108, 117, 125, 0.9);
+  border: 1px solid rgba(108, 117, 125, 0.5);
+}
+
+.inactive-user {
+  opacity: 0.6;
+  background: rgba(108, 117, 125, 0.05);
+}
+
+.inactive-user:hover {
+  opacity: 0.8;
+}
+
+/* Background Images Table Styles */
+.backgrounds-table {
+  margin-top: 20px;
+}
+
+.backgrounds-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.backgrounds-table th,
+.backgrounds-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.backgrounds-table th {
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.image-link {
+  color: rgba(100, 200, 255, 0.9);
+  text-decoration: none;
+  word-break: break-all;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.image-link:hover {
+  color: rgba(100, 200, 255, 1);
+  text-decoration: underline;
+}
+
+.inactive-image {
+  opacity: 0.6;
+  background: rgba(108, 117, 125, 0.05);
+}
+
+.inactive-image:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Statistics Styles */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.stat-card:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.stat-card h3 {
+  margin: 0 0 10px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.stats-table {
+  overflow-x: auto;
+}
+
+.stats-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.stats-table th {
+  background: transparent;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Access Denied Styles */
+.admin-access-denied {
+  text-align: center;
+  padding: 60px 20px;
+  background: transparent;
+}
+
+.admin-access-denied h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  font-family: 'Chalktastic', cursive;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.admin-access-denied p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 10px;
+  }
+  
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .admin-tabs {
+    flex-direction: column;
+  }
+  
+  .backgrounds-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .users-table,
+  .stats-table {
+    overflow-x: auto;
+  }
+  
+  .users-table table,
+  .stats-table table {
+    min-width: 600px;
+  }
+} 

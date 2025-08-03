@@ -1,0 +1,208 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-card {
+  background: transparent;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 32px;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Chalktastic', cursive;
+}
+
+.demo-notice {
+  background: transparent;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.demo-notice p {
+  margin: 5px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.auth-card input {
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  text-align: center;
+}
+
+.auth-card input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Chalktastic', cursive;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.auth-card input:disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.role-selection {
+  text-align: center;
+}
+
+.role-selection label {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  font-size: 18px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.role-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.role-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.role-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.role-option input[type="radio"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.auth-card button {
+  padding: 15px 20px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Chalktastic', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.auth-card button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.auth-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.demo-button {
+  width: 100%;
+  margin-bottom: 20px;
+  background: rgba(255, 215, 0, 0.2) !important;
+  border-color: rgba(255, 215, 0, 0.5) !important;
+  color: rgba(255, 215, 0, 0.9) !important;
+}
+
+.demo-button:hover:not(:disabled) {
+  background: rgba(255, 215, 0, 0.3) !important;
+  border-color: rgba(255, 215, 0, 0.8) !important;
+}
+
+.auth-card p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-auth {
+  background: none !important;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-auth:hover:not(:disabled) {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.toggle-auth:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.forgot-password-button {
+  width: 100%;
+  margin-bottom: 15px;
+  background: rgba(0, 255, 255, 0.2) !important;
+  border-color: rgba(0, 255, 255, 0.5) !important;
+  color: rgba(0, 255, 255, 0.9) !important;
+  font-size: 16px !important;
+  padding: 12px 20px !important;
+}
+
+.forgot-password-button:hover:not(:disabled) {
+  background: rgba(0, 255, 255, 0.3) !important;
+  border-color: rgba(0, 255, 255, 0.8) !important;
+} 

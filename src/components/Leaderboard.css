@@ -1,0 +1,220 @@
+.leaderboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Chalktastic', cursive;
+  background: transparent;
+  min-height: 100vh;
+}
+
+.leaderboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.filter-section {
+  margin-bottom: 30px;
+  text-align: center;
+  background: transparent;
+  padding: 20px;
+}
+
+.filter-label {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.puzzle-filter {
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.puzzle-filter:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.puzzle-filter:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-message,
+.error-message,
+.no-data-message {
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 50px 0;
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.error-message {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.retry-button {
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  margin-top: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.retry-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.leaderboard-table th {
+  background: transparent;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Chalktastic', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.leaderboard-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Chalktastic', cursive;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.leaderboard-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Top player styling (rank 1) */
+.leaderboard-table tbody tr:first-child .user-cell,
+.leaderboard-table tbody tr:first-child .puzzle-cell,
+.leaderboard-table tbody tr:first-child .moves-cell {
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+}
+
+.leaderboard-table tbody tr:first-child .date-cell {
+  color: rgba(255, 255, 255, 1);
+}
+
+.rank-cell {
+  font-weight: bold;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+.user-cell {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.puzzle-cell {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.time-cell {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.moves-cell {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.date-cell {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .leaderboard-container {
+    padding: 10px;
+  }
+  
+  .leaderboard-title {
+    font-size: 2rem;
+  }
+  
+  .filter-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filter-label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 8px 5px;
+    font-size: 0.9rem;
+  }
+  
+  .leaderboard-table th {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-table {
+    font-size: 0.8rem;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 6px 3px;
+    font-size: 0.8rem;
+  }
+  
+  .leaderboard-table th {
+    font-size: 0.9rem;
+  }
+} 

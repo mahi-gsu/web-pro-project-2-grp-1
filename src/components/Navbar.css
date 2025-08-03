@@ -1,0 +1,112 @@
+/* Chalk-style navbar */
+.navbar {
+  background: transparent;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-family: 'Chalktastic', cursive;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+.navbar-brand:hover {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'Chalktastic', cursive;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  user-select: none;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.admin-link {
+  color: rgba(255, 215, 0, 0.9) !important;
+  font-weight: bold;
+}
+
+.admin-link:hover {
+  color: rgba(255, 215, 0, 1) !important;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) !important;
+}
+
+.nav-sound-toggle {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+  }
+  
+  .nav-link {
+    font-size: 16px;
+  }
+  
+  .navbar-nav {
+    gap: 20px;
+  }
+} 
