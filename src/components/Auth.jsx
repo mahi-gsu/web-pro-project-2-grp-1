@@ -160,14 +160,6 @@ const Auth = ({ onAuthChange, isLogin: initialIsLogin = true }) => {
             Forgot Password?
           </button>
         )}
-        
-        <button 
-          className="demo-button" 
-          onClick={handleDemoMode}
-          disabled={loading}
-        >
-          Play as Demo
-        </button>
         <p>
           {isLogin ? "Don't have an account? " : "Already have an account? "}
           <button 
